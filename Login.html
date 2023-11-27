@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login Form</title>
+      <link rel="stylesheet" href="css/style1.css">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="title">
+            Login Form
+         </div>
+         <form action="#">
+            <div class="field">
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="field">
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="field">
+                <button class="field" type="button" onclick="validateLogin()">Login</button>
+            </div>
+            <div class="signup-link">
+               Not a member? <a href="signup.html">Signup now</a>
+            </div>
+         </form>
+      </div>
+      <script>
+        function validateLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+    
+            // Check if username and password are correct (this is just a basic example)
+            if (username === 'demo' && password === 'password') {
+                window.location.href = "index.html";
+            } else {
+                alert('Invalid username or password. Please try again.');
+            }
+        }
+    </script>
+   </body>
+</html>
